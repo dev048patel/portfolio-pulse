@@ -6,13 +6,21 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "plugins": ["expo-notifications", "expo-background-task"],
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "enableRemoteNotifications": false
+        }
+      ],
+      "expo-background-task"
+    ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.example.portfoliopulse"
+      "bundleIdentifier": "com.devpatel.portfoliopulse"
     },
     "android": {
-      "package": "com.example.portfoliopulse",
+      "package": "com.devpatel.portfoliopulse",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -23,6 +31,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3732d641-06d4-4c70-9aec-dfa5b73d44e7"
+      }
     }
   }
 }
